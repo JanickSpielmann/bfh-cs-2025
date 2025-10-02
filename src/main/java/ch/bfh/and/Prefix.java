@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 public class Prefix {
 
-    static void main() {
+    private Prefix() {
+    }
+
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -13,12 +16,12 @@ public class Prefix {
         System.out.println("enter a string to check against");
         String t = sc.nextLine();
 
-        boolean isPrefix = isPrefixRecorsive(s, t);
+        boolean isPrefix = isPrefixRecursive(s, t);
 
         System.out.println("is prefix: " + isPrefix);
     }
 
-    private static boolean isPrefixRecorsive(String s, String t) {
+    private static boolean isPrefixRecursive(String s, String t) {
 
         if (s.length() == 0) {
             return true;
@@ -29,6 +32,6 @@ public class Prefix {
         if (s.charAt(0) != t.charAt(0)) {
             return false;
         }
-        return isPrefixRecorsive(s.substring(1), t.substring(1));
+        return isPrefixRecursive(s.substring(1), t.substring(1));
     }
 }
