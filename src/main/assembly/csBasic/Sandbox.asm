@@ -18,4 +18,4 @@ _start:
 	syscall			; Make call
     	mov rax, 60         	; Code for exit
     	mov rdi, 0          	; Return a code of zero
-    	syscallAQDWsADWAQD             	; Make kernel call
+    	syscalleasd             	; Make kernel call
